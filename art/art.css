@@ -1,0 +1,229 @@
+#art-container {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 60px;
+    margin-bottom: 0px;
+    margin-top: 30px;
+}
+
+.artbox {
+    background-color: var(--navbg);
+    width: 100%;
+    color: white;
+    font-family: arial;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+#c1, #c2, #c3 {
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: 30%;
+    max-width: 324px;
+    margin: 0 15px;
+    display: block;
+}
+
+.info {
+    padding: 10px;
+}
+
+.info p {
+    margin: 5px 0;
+}
+
+#art {
+    width: 100%;
+    cursor: pointer;
+}
+
+span {
+    font-family: arial;
+    font-weight: bold;
+}
+
+xbutton {
+    font-family: 'fixedsys';
+    background-color: var(--red);
+    padding: 5px;
+}
+
+#date {
+    font-style: italic;
+    color: var(--green);
+    text-align: right;
+    margin-bottom: 0;
+}
+
+#tags {
+    color: var(--link);
+    font-weight: bold;
+    text-align: right;
+    cursor: default;
+}
+
+#tags a {
+    text-decoration: none;
+}
+
+.error {
+    color: white;
+    font-family: 'fixedsys', arial;
+    text-align: center;
+    background-color: var(--red);
+    padding: 15px;
+}
+
+button {
+    font-family: arial;
+    font-size: 25px;
+    color: white;
+    background-color: var(--light);
+    border: 2px solid white;
+    padding: 8px 10px;
+    /* if i make this transition, then it looks bad when clicking */
+}
+
+button:hover {
+    background-color: var(--navbg);
+    transition: 0.1s;
+}
+
+button:active {
+    background-color: var(--lessdark);
+}
+
+.sorting {
+    margin: 30px 60px;
+    display: inline-block;
+}
+
+#sort, #tag {
+    color: white;
+    font-family: 'fixedsys';
+    display: inline;
+    padding: 15px;
+    font-size: 25px;
+}
+
+.links {
+    display: flex;
+    justify-content: space-between;
+}
+
+#all-container {
+    display: block;
+    margin: 60px;
+    margin-top: 30px;
+}
+
+.allbox {
+    font-family: 'fixedsys';
+    font-size: 20px;
+    color: white;
+    height: 50px;
+    padding: 5px;
+    transition:  0.1s;
+}
+
+.allbox img {
+    height: 100%;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.allbox:hover {
+    height: 120px;
+    background-color: var(--postbg);
+    transition: 0.1s;
+}
+
+.allbox p {
+    display: inline;
+    vertical-align: middle;
+}
+
+.allbox a {
+    color: var(--link);
+    font-style: italic;
+    text-decoration: none;
+}
+
+#total {
+    color: white;
+    font-family: arial;
+    font-size: 25px;
+    margin-left: 60px;
+}
+
+.yearbox {
+    color: white;
+    font-family: 'fixedsys';
+    font-size: 28px;
+    margin: 5px;
+}
+
+a {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.topcontainer {
+    width: 100%;
+    display: flex;
+    justify-content: right;
+}
+
+#top {
+    position: fixed;
+    bottom: 0;
+    margin-bottom: 100px;
+    padding: 15px;
+}
+
+#top img {
+    height: 64px;
+    vertical-align: middle;
+}
+
+/* 'showing images tagged ___' */
+#tag i {
+    text-decoration: underline;
+}
+
+#tag {
+    text-decoration: none;
+    cursor: default;
+}
+
+#tag:hover {
+    background-color: var(--red);
+    color: white;
+}
+
+@media screen and (max-width: 600px) {
+    #art-container {
+        flex-direction: column;
+    }
+
+    #c1 {
+        margin: auto;
+    }
+
+    #c2, #c3 {
+        display: none;
+    }
+
+    button {
+        font-size: 20px;
+    }
+
+    #sort, #tag {
+        display: block;
+        font-size: 20px;
+        padding: 10px;
+    }
+}

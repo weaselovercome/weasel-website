@@ -1,0 +1,92 @@
+:root {
+    --icon1: #479e1e;
+    --icon2: #2756b4;
+    --icon3: #ba5c26;
+    --icon4: #c63083;
+    --icon5: #2c6abc;
+    --icon1b: #70d541;
+    --icon2b: #3e79ef;
+    --icon3b: #ec905b;
+    --icon4b: #f370b8;
+    --icon5b: #4089e8;
+    --icon1c: #317910;
+    --icon2c: #164299;
+    --icon3c: #a74913;
+    --icon4c: #9d2064;
+    --icon5c: #134f9f;
+}
+
+.icon {
+    width: 122px;
+    height: 122px;
+    object-fit: cover;
+    image-rendering: pixelated;
+    padding: 15px;
+}
+
+.hose {
+    object-position: 0%;
+}
+
+.mg {
+    object-position: 25%;
+}
+
+.ruler {
+    object-position: 50%;
+}
+
+.magnet {
+    object-position: 75%;
+}
+
+.ac {
+    object-position: 100%;
+}
+
+.charbox {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 60px;
+    justify-content: space-between;
+}
+
+#infobox {
+    margin: 0 60px;
+    padding: 15px;
+    font-family: arial;
+    font-size: 25px;
+    font-weight: normal;
+    color: white;
+}
+
+#name {
+    margin: 0 60px;
+    padding: 15px;
+    font-family: arial;
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 3px 3px rgba(0,0,64,0.5);
+}
+
+@media screen and (max-width: 880px) {
+    .charbox {
+        margin-bottom: 15px;
+        justify-content: space-evenly;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .charbox, #name, #infobox {
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+    
+    .icon {
+        width: 90px;
+        height: 90px;
+        image-rendering: auto;
+        padding: 10px;
+    }
+}

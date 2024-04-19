@@ -1,0 +1,6 @@
+pre/
+*.fla
+*.swf
+music/
+*test*
+compatibility.js

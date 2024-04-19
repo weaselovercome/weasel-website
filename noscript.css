@@ -1,0 +1,15 @@
+/* make the audio player work */
+
+audio { 
+    display: block;
+    margin: 10px 0;
+    background-color: var(--light);
+}
+
+#controls {
+    display: none;
+}
+
+#error {
+    display: block;
+}

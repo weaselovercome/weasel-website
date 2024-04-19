@@ -1,0 +1,384 @@
+:root {
+    --dark: rgb(21, 21, 120);
+    --lessdark: rgb(53, 53, 176);
+    --light: rgb(8, 104, 238);
+    --link: rgb(73, 191, 255);
+    --navbg: rgb(0, 74, 178);
+    --postbg: rgb(8, 27, 53);
+    --posttitle: rgb(0, 62, 149);
+    --green: rgb(37, 221, 95);
+    --red: rgb(130, 0, 30);
+    --purple: var(--link);
+}
+
+body {
+    background-color: var(--lessdark);
+    margin: 0;
+    border: 0;
+}
+
+p {
+    margin: 0;
+}
+
+.the-site {
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 0;
+    padding-top: 60px;
+    padding-bottom: 0;
+    background-color: var(--dark);
+}
+
+.footer {
+    width: auto;
+    background-color: var(--light);
+    text-align: center;
+    margin-top: 50px;
+    padding: 30px;
+    color: white;
+    font-size: 24px;
+    font-family: 'sm64';
+    font-weight: normal;
+    font-style: normal
+}
+
+.title {
+    font-family: arial;
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+}
+
+.titlebox {
+    background-color: var(--light);
+    padding: 30px;
+    margin: 60px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+/* copied from toilet paper website */
+
+.navbar {
+    margin: 0 60px 0 60px;
+    background-color: var(--navbg);
+}
+
+.navul {
+    font-family: 'fixedsys';
+    font-size: 30px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    cursor: default;
+}
+
+.navli {
+    display: inline-block;
+    list-style: none;
+    margin: auto;
+    color: white;
+    text-decoration: none;
+    padding: 20px;
+    background-color: var(--navbg);
+    transition: 0.1s;
+}
+
+.navli:hover {
+    background-color: var(--lessdark);
+    transition: 0.1s;
+}
+
+.rani:hover, .sprimkle, a:hover:not(#tag) {
+    animation-name: rainbow;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes rainbow {
+    0% {color: hsl(0, 100%, 65%);}
+    20% {color: hsl(72, 100%, 65%);}
+    40% {color: hsl(144, 100%, 65%);}
+    60% {color: hsl(216, 100%, 65%);}
+    80% {color: hsl(288, 100%, 65%);}
+    100% {color: hsl(360, 100%, 65%);}
+}
+
+/* the little posts and sidebar */
+.containerer {
+    display: flex;
+    padding: 30px;
+    margin: 30px 0 30px 0;
+    color: white;
+    font-family: arial;
+    justify-content: space-around;
+}
+
+#posts {
+    flex-grow: 3;
+    margin-right: 30px;
+    min-width: 300px;
+    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+}
+
+.post {
+    background-color: var(--postbg);
+    border: 5px solid var(--light);
+    padding: 15px;
+    border-radius: 10px;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.post-title {
+    background: linear-gradient( var(--postbg) 10%, var(--posttitle) );
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 25px;
+}
+
+.post-date {
+    font-size: 15px;
+    float: right;
+    color: var(--green);
+    font-style: italic;
+}
+
+.post-content {
+    padding: 10px;
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+/* elaborations with title attribute */
+span.hover {
+    color: var(--link);
+}
+
+p a {
+    color: var(--link);
+    font-style: italic;
+}
+
+.images img {
+    max-height: 200px;
+    margin: 5px;
+    max-width: 100%;
+}
+
+.small-gif {
+    width: 96px;
+    float: left;
+}
+
+.manwalksinto {
+    font-size: 30px;
+    flex-grow: 1;
+    padding: 30px;
+    min-width: 200px;
+}
+
+.manlist {
+    font-size: 25px;
+    font-family: 'fixedsys';
+}
+
+li a {
+    color: var(--link);
+}
+
+li a:visited {
+    color: var(--purple);
+}
+
+.bodytext {
+    font-family: arial;
+    font-size: 25px;
+    font-weight: normal;
+    color: white;
+    margin: 30px 60px;
+    line-height: 1.4;
+}
+
+/* audio player */
+
+.audio-player {
+    border: 2px solid var(--link);
+    padding: 10px;
+    margin: 10px 0;
+}
+
+audio {
+    display: none;
+}
+
+.audio-player p {
+    font-size: 20px;
+}
+
+#play-icon, #mute-icon {
+    width: 32px;
+    vertical-align: bottom;
+}
+
+input[type="range"] {
+    vertical-align: middle;
+}
+
+.control {
+    padding: 5px;
+}
+
+#controls span {
+    font-family: 'fixedsys';
+    white-space: pre;
+}
+
+/* image viewer */
+.bg {
+    background: hsla(247, 100%, 15%, 0.75);
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.bigimage {
+    max-height: 80%;
+    max-width: 90%;
+    min-height: 30%;
+    position: absolute;
+    margin: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* error message and noscript stuff */
+.error {
+    color: white;
+    font-family: 'fixedsys', arial;
+    font-size: 25px;
+    text-align: center;
+    background-color: var(--red);
+    padding: 15px;
+    min-width: 300px;
+    margin: 0 30px;
+    flex-grow: 1;
+}
+
+#posts .error {
+    flex-grow: 0;
+}
+
+.error b {
+    font-size: 30px;
+    margin-bottom: 55px;
+}
+
+/* overwritten by noscript.css */
+#error {
+    display: none;
+}
+
+.nojs {
+    margin: 30px 60px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+}
+
+@media (max-width: 750px) {
+    .nojs {
+        flex-wrap: wrap;
+    }
+}
+
+.errorimg {
+    margin: auto;
+    flex-grow: 0;
+}
+
+#todo {
+    display: none;
+    font-size: 30px;
+    font-family: arial;
+    padding-top: 30px;
+}
+
+#todo li {
+    font-size: 25px;
+}
+
+#posttext {
+    display: none;
+}
+
+/* mobile stuff */
+
+@media screen and (max-width: 650px) {
+    .the-site {
+        padding-top: 30px;
+    }
+
+    .containerer {
+        flex-direction: column-reverse;
+        margin: 0;
+    }
+
+    #posts {
+        margin-right: 0;
+    }
+
+    .post-content, .manlist {
+        font-size: 18px;
+    }
+
+    .bodytext {
+        font-size: 20px;
+    }
+
+    .titlebox {
+        padding: 20px;
+    }
+
+    .title {
+        font-size: 25px;
+    }
+
+    .navul {
+        font-size: 22px;
+    }
+
+    .navli {
+        padding: 10px;
+    }
+
+    .footer {
+        margin-top: 30px;
+    }
+
+    /* fix margin on, like, everything */
+    .navbar,  .titlebox, .bodytext {
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+
+    /* add text to show that it's posts */
+    #posttext {
+        display: block;
+    }
+
+    .images img {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}

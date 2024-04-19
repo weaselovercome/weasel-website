@@ -1,0 +1,51 @@
+.aboutme {
+    background-color: var(--navbg);
+    border: none;
+    padding: 30px;
+    color: white;
+    font-family: arial;
+    margin: 90px;
+    margin-top: 60px
+}
+
+.anotherbox {
+    margin: 10px;
+    padding: 15px;
+    font-size: 25px;
+    border: 2px solid white;
+    box-shadow: 7px 7px white;
+}
+
+ipa {
+    font-style: italic;
+    margin-left: 15px;
+    color: var(--green);
+}
+
+.aboutcont {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.aboutcont .anotherbox {
+    width: 50%;
+}
+
+@media screen and (max-width: 650px) {
+    .aboutcont {
+        flex-wrap: wrap;
+    }
+
+    .aboutcont .anotherbox {
+        width: 100%;
+    }
+
+    .aboutme {
+        margin: 45px;
+        padding: 20px;
+    }
+
+    .anotherbox, .anotherbox li {
+        font-size: 20px;
+    }
+}

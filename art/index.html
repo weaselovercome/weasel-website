@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<head>
+    <title>ART</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="/main.css">
+    <link rel="stylesheet" type="text/css" href="/font/stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="/art/art.css">
+</head>
+<body>
+    <div class="the-site">
+        <div class="titlebox">
+            <p class="title">here lies the best of my art</p>
+        </div>
+        <div class="navbar">
+            <ul class="navul">
+                <a href="/"><li class="navli rani">HOME</li></a>
+                <a href="/art/"><li class="navli rani">ART</li></a>
+                <a href="/comic/"><li class="navli rani">COMIC</li></a>
+                <a href="/about/"><li class="navli rani">ABOUT</li></a>
+            </ul>
+        </div>
+
+        <noscript>
+            <div class="nojs">
+                <p class="error">
+                    You should enable Javascript. Please ? I spent like a week making this work; the least you can do is let me run stuff on your computer !
+                </p>
+                <div class="errorimg">
+                    <img style="width: 240px" src="/image/nojs.png">
+                </div>
+            </div>
+            <style>.sorting { display: none; }</style>
+        </noscript>
+
+        <div class="sorting">
+            <button id="swap" onclick="swapOrder()">swap order</button>
+            <p id="sort"></p>
+        </div>
+        <p id="total"></p>
+
+        <div id="art-container">
+            <div id="c1"></div>
+            <div id="c2"></div>
+            <div id="c3"></div>
+        </div>
+
+        <div class="footer">
+            <p>It's look who it is</p>
+        </div>
+    </div>
+
+    <script src="/bigimage.js"></script>
+    <script src="artloader.js"></script>
+    <script src="/cookie.js"></script>
+    <script>
+        load = false;
+    </script>
+</body>
