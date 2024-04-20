@@ -69,7 +69,8 @@ function doTheThing(images) {
     var j = 0; // counter of images shown
     for (let i = 0; i < tmp.length; i++) {
         // add image if there isn't a tag requirement or if it fits criteria
-        if (!tag || checkTags(tag, tmp[i])) {
+        // and it isn't hidden (check that first)
+        if (!tmp[i].hide && (!tag || checkTags(tag, tmp[i]))) {
             // add to column depending on number
             addImage(tmp[i], j % 3);
             j++;
@@ -231,7 +232,7 @@ function checkTags(tag, image) {
     var pass = false; // true if it matches
 
     for (let  i = 0; i < tags.length; i++) {
-        console.log(tags[i] + " " + tag);
+        //console.log(tags[i] + " " + tag);
         if (tags[i] == tag) {
             pass = true;
         }

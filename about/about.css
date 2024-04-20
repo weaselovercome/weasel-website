@@ -31,7 +31,7 @@ ipa {
     width: 50%;
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 750px) {
     .aboutcont {
         flex-wrap: wrap;
     }
